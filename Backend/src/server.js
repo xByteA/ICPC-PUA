@@ -4,7 +4,7 @@ import { config } from './config/env.js';
 
 try {
   await mongoose.connect(config.mongoUri);
-  app.listen(config.port, () => {
+  app.listen(config.port,"0.0.0.0", () => {
     console.log(`PUA ICPC Community API listening on port ${config.port}`);
   });
 } catch (error) {
